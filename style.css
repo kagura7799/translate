@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    border: 0;
+    background-color: #020c4d;
+    color: white;
+    font-family: Optima, sans-serif
+}
+
+h1 {
+    letter-spacing: 5px;
+}
+
+label {
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(2, 12, 77, 0.5);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(2, 12, 77, 0.3) 100%); /* Градиентный фон */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px;
+}
+
+.container::before,
+.container::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Цвет размытого фона */
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.container::after {
+    filter: blur(20px); /* Большее размытие для второго слоя */
+}
+
+.result-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.result {
+    display: inline-block;
+    padding: 20px;
+    background: #0606b4;
+    text-align: center;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.contres {
+    margin-top: 20px;
+}
+
+.send-btn {
+    width: 300px;
+    height: 50px;
+    background: none;
+    border-radius: 4px;
+    border: 3px solid #1b06d5;
+    color: #1b06d5;
+    box-shadow: 0px 0px 20px 0px;
+}
+
+.send-btn:hover {
+    background: blue;
+    transition: all 0.5s;
+}
+
+.send-btn:active {
+    background: #0303ce;
+}
+
+input {
+    background: none;
+    border: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
+}
+
+input:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.btn-p {
+    color: black;
+    letter-spacing: 5px;
+}
+
+.line {
+    background: white;
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+footer {
+    background: black;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.line-footer {
+    margin: 0;
+}
+
+/* Дополнительные стили для адаптивности */
+@media screen and (max-width: 600px) {
+    .result {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
